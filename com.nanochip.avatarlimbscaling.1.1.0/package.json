@@ -1,0 +1,18 @@
+{
+  "name" : "com.nanochip.avatarlimbscaler",
+  "displayName" : "Avatar Limb Scaler",
+  "version" : "1.1.0",
+  "unity" : "2022.3",
+  "description" : "Prefab to adjust limb scales ingame.",
+  "author": {
+    "name": "Nanochip",
+    "email": ""
+  },
+  "legacyFolders" : {
+      "Assets\\AvatarLimbScaling" : "d072ad9c4c8ecea41a3670b63d3102f3"
+  },
+    "vpmDependencies" : {
+    "com.vrchat.avatars" : "3.x.x",
+    "com.vrcfury.vrcfury" : ">=1.1127.0"
+  }
+}
