@@ -1,85 +1,41 @@
-# VPM Package Template [<img src="https://github.com/JustSleightly/Resources/raw/main/Icons/JSLogo.png" width="30" height="30">](https://vrc.sleightly.dev/ "JustSleightly") [<img src="https://github.com/JustSleightly/Resources/raw/main/Icons/Discord.png" width="30" height="30">](https://discord.sleightly.dev/ "Discord") [<img src="https://github.com/JustSleightly/Resources/raw/main/Icons/GitHub.png" width="30" height="30">](https://github.sleightly.dev/ "Github") [<img src="https://github.com/JustSleightly/Resources/raw/main/Icons/Store.png" width="30" height="30">](https://store.sleightly.dev/ "Store")
+# VRC Avatar Limb Sclaing
 
-[![GitHub stars](https://img.shields.io/github/stars/JustSleightly/VPM-Package-Template)](https://github.com/JustSleightly/VPM-Package-Template/stargazers) [![GitHub Tags](https://img.shields.io/github/tag/JustSleightly/VPM-Package-Template)](https://github.com/JustSleightly/VPM-Package-Template/tags) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/JustSleightly/VPM-Package-Template?include_prereleases)](https://github.com/JustSleightly/VPM-Package-Template/releases) [![GitHub issues](https://img.shields.io/github/issues/JustSleightly/VPM-Package-Template)](https://github.com/JustSleightly/VPM-Package-Template/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/JustSleightly/VPM-Package-Template)](https://github.com/JustSleightly/VPM-Package-Template/commits/main) [![Discord](https://img.shields.io/discord/780192344800362506)](https://discord.sleightly.dev/)
+Avatar Limb Scaling is a simple drag-n-drop prefab that lets you resize your VRChat avatar’s arms and legs using the in-game Expressions toggle menu. Useful to match your avatar’s proportions to your real-life body, improving Full Body Tracking.
 
-A stripped down version of the official VRChat [VPM Package Template](https://github.com/vrchat-community/template-package) that excludes all of the extra website/project bloat.
+## 🧾 Features
+- Intended for any VRChat avatar
+- Menu sliders to expand/shrink your Avatar's arms/legs
+- Quick fix for bent knees & elbows
+- Best with Full Body Tracking
+- VRCFury for auto-installation
+- Quest standalone/Android compatible
+- Menu icons
 
-This is modified from [Dreadrith's template](https://github.com/Dreadrith/Listed-VPM-Template) to support a slightly different workflow, with inspiration from [bd_](https://github.com/bdunderscore/modular-avatar) and [Razgriz](https://github.com/rrazgriz/RATS), and help from [Fox_score](https://github.com/foxscore).
+## 🔍 How It Works
+Avatar Limb Scaling is non-destructive in its default state. When the user adjusts their limbs in-game, it scales the arms and legs along the Y axis, then it invert scales the hands/feet to help alleviate any weird stretching/shrinking that can occur from non-uniform scaling.
 
-## Features
+## 📝 Dependencies & Installation
+⚙️ Please have basic Unity knowledge such as uploading a VRChat avatar, importing unity packages, and familiar with VRChat Creator Companion (VCC).
+1. Ensure the below dependencies are installed and up to date.
+    1. In VCC, confirm you’re using the latest versions of VRChat SDK - Base and VRChat SDK - Avatars.
+    2. In VCC, [Install VRCFury](https://vrcfury.com/download/) and update it if an update is available.
+2. Add [Avatar Limb Scaling VPM Package]() to VCC. Select "Add to VCC."
+3. In VCC, add Avatar Limb Scaling to your project.
+4. In Unity, Right click your avatar's object in the Hierarchy and select Nanochip > Spawn Avatar Limb Scaling Prefab.
+5. (Optional) Relocate the Avatar Limb Scaling menu somewhere else in your Expressions menu.
+    1. Select your Avatar’s object in the Hierarchy.
+    2. In the Inspector, scroll down and click Add Component > VRCFury > Move or Rename Menu Item.
+    3. For **From Path**, click Select, then choose Avatar Limb Scaling > Select this folder.
+    4. For **To Path**, use Select again to choose the destination menu folder where you’d like Avatar Limb Scaling to appear.
 
-- Can clone multiple VPM package templates into one Unity project
-- Automatically builds a GitHub release with a `.unitypackage`, `.zip`, and `package.json` upon pushing a commit to the `package.json` only if there is no existing release tag for the pushed version number when `package.json` is updated
-- Automatically tag GitHub releases as `pre-release` when version is hyphenated
-- Can automatically add an icon to the `.unitypackage` that is displayed when imported
-- Can automatically trigger an update/action to an external repository like a [VPM Package Listing](https://github.com/JustSleightly/VPM-Package-Listing-Template)
+## ⚠️ Disclaimer
+When using Avatar Limb Scaling to adjust your arms or legs, your hands or feet may appear slightly smaller or larger. This is a normal tradeoff that can vary between avatars, so I recommend making only small adjustments to minimize this.
 
-## Instructions
+## Credits
+- [Hanee_BEE](https://x.com/honeybee6519) for creating a [Unity tutorial](https://x.com/honeybee6519/status/1987192790732972330) on setting up a similar system that is found on [Googi](https://x.com/_Googii)'s avatar(s). This is what inspired me to create this drag-n-drop prefab.
+- [Sacred](https://jinxxy.com/Sacred) for the wealth of knowledge, feedback, and testing.
+- [BUDDYWORKS](https://buddyworks.wtf/) for creating this VPM listing for me.
 
-1. Create a new repository using this button: [<img src="https://user-images.githubusercontent.com/737888/185467681-e5fdb099-d99f-454b-8d9e-0760e5a6e588.png" height="25">](https://github.com/JustSleightly/VPM-Package-Template/generate/ "Use this template")
-2. Clone your new repository onto your PC within an **existing Unity project** under `Packages/` with any directory name
-    - This will generate a fresh set of GUIDs for each file within this package template and prevent conflicts with other packages
-3. Modify the cloned files for your new package
-    - Replace or remove `.github/thumbnail.png` with your own `.unitypackage` import thumbnail
-    - Edit `.github/workflows/release.yml`
-        - Line 10 (Remove `.github/thumbnail.png` if you don't want an import thumbnail)
-        - Line 11 (Read [Trigger Repo Update](https://github.com/JustSleightly/VPM-Package-Template#trigger-repo-update) section below)
-    - Edit `.github/workflows/trigger-repo-update.yml`
-        - Read [Trigger Repo Update](https://github.com/JustSleightly/VPM-Package-Template#trigger-repo-update) section below
-    - Rename and Edit `Documentation~/dev.sleightly.template.md` if used
-    - Rename and Edit `Editor/dev.sleightly.template.Editor.asmdef` if used
-        - "name"
-        - "references"
-    - Rename and Edit `Runtime/dev.sleightly.template.asmdef` if used
-        - "name"
-    - Edit `CHANGELOG.md` ([Recommended Format](https://keepachangelog.com/en/))
-    - Edit `LICENSE.md` ([Need help?](https://choosealicense.com/))
-    - Edit `package.json`
-        - Use [VRChat's](https://vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions) and [Unity's](https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPkg.html) documentation for reference
-4. Add any necessary scripts, resources, [samples](https://docs.unity3d.com/2019.4/Documentation/Manual/cus-samples.html), and other files
-5. Remove `Documentation~`, `Editor`, `Runtime`, `CHANGELOG.md`, and `LICENSE.md` if unused
-
-## Trigger Repo Update
-
-If you have a [VPM Package Listing](https://github.com/JustSleightly/VPM-Package-Listing-Template) (or another repository) you'd like to trigger a workflow for, after building/publishing/modifying a release in this package repository, conduct the following steps as well. Otherwise, skip these steps.
-
-1. Edit `.github/workflows/trigger-repo-update.yml`
-    - Line 12 (Set to `true` to enable triggering a repo update when a release is manually published/modified)
-    - Line 13 (Owner of target repository to trigger)
-    - Line 14 (Name of target repository to trigger)
-    - Line 15 (Branch of target repository to trigger)
-    - Line 16 (File name of target workflow to trigger)
-    - Line 17 (Replace `VPM_TOKEN` with name of [Personal Access Token](https://github.com/JustSleightly/VPM-Package-Template#setting-a-personal-access-token) secret added to this repository)
-2. Edit `.github/workflows/release.yml`
-    - Line 11 (Set to `true` in order for the automatic build to trigger `.github/workflows/trigger-repo-update.yml`)
-
-### Setting a Personal Access Token
-
-To trigger a remote repository you must create a Personal Access Token (PAT) with the repo scope and store it as a secret.
-
-1. [Create a new fine-grained personal access token (beta)](https://github.com/settings/personal-access-tokens/new)
-    - Token name (Can be anything, and is different than the name used in `trigger-repo-update.yml`)
-    - Expiration (Can be anything up to a year)
-    - Repository Access - Only Select Repositories
-        - Select your VPM Listing/Target repository, not your package repository
-    - Permissions - Repository Permissions
-        - Actions - Read and Write
-        - Metadata - Read-only (Set by default when granted Actions permissions - Mandatory)
-    - Press `Generate Token`
-        - **Copy and Save** the token on the following screen as it will not be displayed again
-        - This can be used for any package repository that you may want to trigger your listing repository in the future
-2. [Add your PAT as a secret to your package repository](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
-    - Navigate to your package repository (not your listing/target repository) and press the **Settings** tab
-    - Navigate to `Secrets and Variables > Actions` under the **Security** tab in the sidebar
-    - Press `New repository secret`
-    - Add a `Name` for the secret
-        - This is the name used in `trigger-repo-update.yml` which the template has named `VPM_TOKEN` by default
-        - Consider naming it based on your listing/target repository in case you have multiple listings in the future
-    - Copy the token from step 1 into the `Secret` field
-    - Press `Add Secret`
-
-## Notes
-
-Folders that end in `~` such as `Documentation~` or `Samples~` are hidden from the Unity Project view within the editor.
-
-Therefore, when the package is exported as a `.unitypackage` whether manually or via automated GitHub workflow, such folders are omitted. The folders are still present in the `.zip` export and when imported through the [VRChat Creator Companion](https://vcc.docs.vrchat.com/vpm/packages/#community-packages)
+## Terms of Use:
+- ✅ Do whatever you want with this prefab, idc 👍
+- ✅ All commercial use is allowed. Credit is appreciated but not required 👍
