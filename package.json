@@ -1,9 +1,9 @@
 {
-  "name" : "com.nanochip.avatarlimbscaler",
-  "displayName" : "Avatar Limb Scaler",
-  "version" : "1.1.1",
+  "name" : "com.nanochip.avatarlimbscaling",
+  "displayName" : "Avatar Limb Scaling",
+  "version" : "1.1.0",
   "unity" : "2022.3",
-  "description" : "Prefab to adjust limb scales ingame.",
+  "description" : "Prefab to adjust the scale of avatar's limbs in-game.",
   "author": {
     "name": "Nanochip",
     "email": ""
