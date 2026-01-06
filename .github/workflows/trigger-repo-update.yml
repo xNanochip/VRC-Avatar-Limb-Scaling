@@ -10,7 +10,7 @@ on:
 
 env:
   triggerUpdate: ${{ true }}
-  repoOwner: "Nanochip"
+  repoOwner: "xNanochip"
   repoName: "VPM-Package-Listing"
   repoBranch: "main"
   workflowName: "build-listing.yml"
