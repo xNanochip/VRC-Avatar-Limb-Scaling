@@ -14,7 +14,7 @@ env:
   repoName: "VPM-Package-Listing"
   repoBranch: "main"
   workflowName: "build-listing.yml"
-  accessToken: ${{ secrets.VPMPackageListing }}
+  accessToken: ${{ secrets.VPMPACKAGELISTING }}
 
 jobs:
   dispatch:
