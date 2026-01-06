@@ -8,7 +8,7 @@ on:
 
 env:
   icon_path: .github/thumbnail.png
-  triggerRepoUpdate: ${{ false }}
+  triggerRepoUpdate: ${{ true }}
 
 permissions:
   contents: write
