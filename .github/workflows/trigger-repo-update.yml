@@ -9,12 +9,12 @@ on:
   workflow_dispatch: 
 
 env:
-  triggerUpdate: ${{ false }}
-  repoOwner: "JustSleightly"
-  repoName: "VPM-Package-Listing-Template"
+  triggerUpdate: ${{ true }}
+  repoOwner: "Nanochip"
+  repoName: "VRC-Avatar-Limb-Scaling"
   repoBranch: "main"
   workflowName: "build-listing.yml"
-  accessToken: ${{ secrets.VPM_TOKEN }}
+  accessToken: ${{ secrets.VRC-ALS-Token }}
 
 jobs:
   dispatch:
