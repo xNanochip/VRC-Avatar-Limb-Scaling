@@ -19,7 +19,7 @@ Avatar Limb Scaling is non-destructive in its default state. When the user adjus
 1. Ensure the below dependencies are installed and up to date.
     1. In VCC, confirm you’re using the latest versions of VRChat SDK - Base and VRChat SDK - Avatars.
     2. In VCC, [Install VRCFury](https://vrcfury.com/download/) and update it if an update is available.
-2. Add [Avatar Limb Scaling VPM Package]() to VCC. Select "Add to VCC."
+2. Add [Avatar Limb Scaling VPM Package](https://xnanochip.github.io/VPM-Package-Listing/) to VCC. Select "Add to VCC."
 3. In VCC, add Avatar Limb Scaling to your project.
 4. In Unity, Right click your avatar's object in the Hierarchy and select Nanochip > Spawn Avatar Limb Scaling Prefab.
 5. (Optional) Relocate the Avatar Limb Scaling menu somewhere else in your Expressions menu.
