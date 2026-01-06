@@ -11,10 +11,10 @@ on:
 env:
   triggerUpdate: ${{ true }}
   repoOwner: "Nanochip"
-  repoName: "VRC-Avatar-Limb-Scaling"
+  repoName: "VPM-Package-Listing"
   repoBranch: "main"
   workflowName: "build-listing.yml"
-  accessToken: ${{ secrets.VRC-ALS-Token }}
+  accessToken: ${{ secrets.VPM-Package-Listing }}
 
 jobs:
   dispatch:
