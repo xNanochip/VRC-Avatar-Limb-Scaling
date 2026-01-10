@@ -2,13 +2,18 @@ using UnityEngine;
 using UnityEditor;
 
 namespace Nanochip.AvatarLimbScaling
-{  
+{
     public class PrefabSpawner : MonoBehaviour
     {
         // VRCF Prefab definitions
         static string prefab = "c0802794c7b9ff941873338202c5c7f7";
 
         static string VRCF_Path = "Packages/com.vrcfury.vrcfury";
+
+        // MA Prefab definitions
+        static string prefab_MA = "159b5232ae618f142bf758a737b55752";
+
+        static string MA_Path = "Packages/nadena.dev.modular-avatar";
 
 
         // Toolbar Menu - VRCF
@@ -25,6 +30,22 @@ namespace Nanochip.AvatarLimbScaling
         private static bool ValidateSpawnPrefab()
         {
             return AssetDatabase.IsValidFolder(VRCF_Path);
+        }
+
+        // Toolbar Menu - MA
+        [MenuItem("Tools/Nanochip/Spawn Avatar Limb Scaling Prefab... [ModularAvatar]", false, 1)]
+        [MenuItem("GameObject/Nanochip/Spawn Avatar Limb Scaling Prefab... [ModularAvatar]", false, 1)]
+        private static void SpawnPrefab_MA()
+        {
+            SpawnPrefab(prefab_MA);
+        }
+
+        // Enable or disable menu items dynamically for MA
+        [MenuItem("Tools/Nanochip/Spawn Avatar Limb Scaling Prefab... [ModularAvatar]", true)]
+        [MenuItem("GameObject/Nanochip/Spawn Avatar Limb Scaling Prefab... [ModularAvatar]", true)]
+        private static bool ValidateSpawnPrefab_MA()
+        {
+            return AssetDatabase.IsValidFolder(MA_Path);
         }
 
         // Prefab Spawner
