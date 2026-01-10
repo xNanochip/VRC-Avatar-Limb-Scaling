@@ -1,0 +1,28 @@
+{
+    "name": "com.nanochip.avatarlimbscaling.modularavatar.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6d2255f0cd6dfad4b9c54a02abfd3b80",
+        "GUID:62ced99b048af7f4d8dfe4bed8373d76",
+        "GUID:fc900867c0f47cd49b6e2ae4ef907300"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ALS_MA_1_13_0"
+    ],
+    "versionDefines": [
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.13.0",
+            "define": "ALS_MA_1_13_0"
+        }
+    ],
+    "noEngineReferences": false
+}
