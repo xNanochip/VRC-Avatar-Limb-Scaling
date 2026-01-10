@@ -15,7 +15,8 @@
     "AvatarLimbScaling"
   ],
   "legacyFolders" : {
-      "Assets\\AvatarLimbScaling" : "d072ad9c4c8ecea41a3670b63d3102f3"
+      "Assets\\AvatarLimbScaling" : "d072ad9c4c8ecea41a3670b63d3102f3",
+      "Assets\\AvatarLimbScaling Modular Avatar Add-on" : "6dcc292f3638f19438b81b85d29e0d70"
   },
     "vpmDependencies" : {
     "com.vrchat.avatars" : "^3.x.x",
